@@ -1,0 +1,244 @@
+@startuml
+
+title __DATAMANAGEMENT's Class Diagram__\n
+
+  namespace com.projects.DataManagement {
+    class com.projects.DataManagement.FoodItem {
+        - carbohydrates : double
+        - consumer : String
+        - fats : double
+        - foodName : String
+        - grams : double
+        - id : long
+        - proteins : double
+        + FoodItem()
+        + FoodItem()
+        + FoodItem()
+        + FoodItem()
+        + FoodItem()
+        + getCarbohydrates()
+        + getConsumer()
+        + getFats()
+        + getFoodName()
+        + getGrams()
+        + getId()
+        + getProteins()
+        + getType()
+        + setConsumer()
+        + setGrams()
+        + setGrams()
+        + setId()
+        + setType()
+    }
+  }
+  
+
+  namespace com.projects.DataManagement {
+    enum CaloriesScale {
+      כוס
+      כף
+      כפית
+      ספל
+      צנצנת
+    }
+  }
+  
+
+  namespace com.projects.DataManagement {
+    enum FoodType {
+      DAIRY
+      DESSERT
+      FRUIT
+      GRAIN
+      JUNK
+      VEGETABLE
+    }
+  }
+  
+
+  namespace com.projects.DataManagement {
+    class com.projects.DataManagement.MenuAdapter {
+        - context : Context
+        - menu : ArrayList<FoodRecyclerItem>
+        + MenuAdapter()
+        + filterList()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+    }
+  }
+  
+
+  namespace com.projects.DataManagement {
+    class com.projects.DataManagement.MenuAdapter.MenuViewHolder {
+        + cs : Spinner
+        + imageView : ImageView
+        + name : TextView
+        + MenuViewHolder()
+    }
+  }
+  
+
+  namespace com.projects.DataManagement {
+    class com.projects.DataManagement.MenuHelperDB {
+        ~ statement : String
+        {static} - COLUMN_CARBS : String
+        {static} - COLUMN_CONSUMER : String
+        {static} - COLUMN_DAYS : String
+        {static} - COLUMN_FATS : String
+        {static} - COLUMN_GRAMS : String
+        {static} - COLUMN_ID : String
+        {static} - COLUMN_MEALS : String
+        {static} - COLUMN_NAME : String
+        {static} - COLUMN_PROTEINS : String
+        {static} - COLUMN_TYPES : String
+        {static} - DATABASE_NAME : String
+        {static} - DATABASE_VERSION : int
+        {static} - TABLE_RECORD : String
+        - context : Context
+        + MenuHelperDB()
+        + addFoodItem()
+        + deleteConsumerMenu()
+        + deleteFoodItem()
+        + emptyAll()
+        + onCreate()
+        + onUpgrade()
+        + searchConsumerMeal()
+        + searchConsumerMenu()
+        + updateCarbohydrates()
+        + updateFats()
+        + updateGrams()
+        + updateProteins()
+    }
+  }
+  
+
+  namespace com.projects.DataManagement {
+    class com.projects.DataManagement.MenuLoadAdapter {
+        - context : Context
+        - menu : ArrayList<FoodRecyclerItem>
+        + MenuLoadAdapter()
+        + getItemCount()
+        + onBindViewHolder()
+        + onCreateViewHolder()
+    }
+  }
+  
+
+  namespace com.projects.DataManagement {
+    class com.projects.DataManagement.MenuLoadAdapter.MenuViewHolder {
+        + grams : TextView
+        + imageView : ImageView
+        + name : TextView
+        + MenuViewHolder()
+    }
+  }
+  
+
+  namespace com.projects.DataManagement {
+    class com.projects.DataManagement.User {
+        - age : int
+        - height : double
+        - id : long
+        - password : String
+        - username : String
+        - weight : double
+        + User()
+        + getAge()
+        + getGender()
+        + getHeight()
+        + getId()
+        + getPassword()
+        + getStatus()
+        + getUsername()
+        + getWeight()
+        + setAge()
+        + setGender()
+        + setHeight()
+        + setId()
+        + setPassword()
+        + setStatus()
+        + setUsername()
+        + setWeight()
+    }
+  }
+  
+
+  namespace com.projects.DataManagement {
+    enum Gender {
+      FEMALE
+      MALE
+      OTHER
+    }
+  }
+  
+
+  namespace com.projects.DataManagement {
+    enum SportStatus {
+      ACTIVE
+      COUCH_POTATO
+      SEMI_ACTIVE
+      VERY_ACTIVE
+    }
+  }
+  
+
+  namespace com.projects.DataManagement {
+    class com.projects.DataManagement.UserHelperDB {
+        ~ statement : String
+        {static} - COLUMN_AGE : String
+        {static} - COLUMN_GENDER : String
+        {static} - COLUMN_HEIGHT : String
+        {static} - COLUMN_ID : String
+        {static} - COLUMN_PASSWORD : String
+        {static} - COLUMN_SPORT_STATUS : String
+        {static} - COLUMN_USERNAME : String
+        {static} - COLUMN_WEIGHT : String
+        {static} - DATABASE_NAME : String
+        {static} - DATABASE_VERSION : int
+        {static} - TABLE_RECORD : String
+        - context : Context
+        + UserHelperDB()
+        + addUser()
+        + containsUser()
+        + containsUserName()
+        + deleteUser()
+        + emptyAll()
+        + onCreate()
+        + onUpgrade()
+        + searchByKey()
+        + updatePassword()
+        + updateUser()
+        + updateUserAge()
+        + updateUserGender()
+        + updateUserHeight()
+        + updateUserSportStatus()
+        + updateUserWeight()
+    }
+  }
+  
+
+  com.projects.DataManagement.FoodItem o-- com.projects.DataManagement.FoodType : type
+  com.projects.DataManagement.FoodItem +-down- com.projects.DataManagement.FoodItem.CaloriesScale
+  com.projects.DataManagement.MenuAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.projects.DataManagement.MenuAdapter +-down- com.projects.DataManagement.MenuAdapter.MenuViewHolder
+  com.projects.DataManagement.MenuAdapter.MenuViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.projects.DataManagement.MenuHelperDB -up-|> android.database.sqlite.SQLiteOpenHelper
+  com.projects.DataManagement.MenuLoadAdapter -up-|> androidx.recyclerview.widget.RecyclerView.Adapter
+  com.projects.DataManagement.MenuLoadAdapter +-down- com.projects.DataManagement.MenuLoadAdapter.MenuViewHolder
+  com.projects.DataManagement.MenuLoadAdapter.MenuViewHolder -up-|> androidx.recyclerview.widget.RecyclerView.ViewHolder
+  com.projects.DataManagement.User o-- com.projects.DataManagement.User.Gender : gender
+  com.projects.DataManagement.User o-- com.projects.DataManagement.User.SportStatus : status
+  com.projects.DataManagement.User +-down- com.projects.DataManagement.User.Gender
+  com.projects.DataManagement.User +-down- com.projects.DataManagement.User.SportStatus
+  com.projects.DataManagement.UserHelperDB -up-|> android.database.sqlite.SQLiteOpenHelper
+
+
+right footer
+
+
+PlantUML diagram generated by SketchIt! (https://bitbucket.org/pmesmeur/sketch.it)
+For more information about this tool, please contact philippe.mesmeur@gmail.com
+endfooter
+
+@enduml

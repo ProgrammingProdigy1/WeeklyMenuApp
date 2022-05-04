@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="התחברות"
+        android:textSize="35sp"
+        android:src="@drawable/registration"
+        android:textAlignment="center"
+        android:paddingVertical="20sp"
+        android:textStyle="bold"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="שם המשתמש: "
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:paddingRight="10dp"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="22.5sp"
+        android:textDirection="rtl"
+        android:id="@+id/userName_et"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="סיסמא: "
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:paddingRight="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layoutDirection="rtl"
+        android:weightSum="10">
+        <EditText
+            android:id="@+id/password_et"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="9"
+            android:inputType="textPassword"
+            android:textColor="@color/white"/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="5dp"
+            android:id="@+id/showPassword_ib"
+            android:layout_weight="0.75"
+            android:background="@drawable/ic_password" />
+    </LinearLayout>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:background="@drawable/main_button_border"
+        android:layout_height="wrap_content"
+        android:text="אישור"
+        android:id="@+id/confirm_btn"
+        android:textAlignment="center"
+        android:paddingVertical="15dp"
+        android:paddingHorizontal="60dp"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="30dp"
+        android:paddingVertical="20dp"
+        android:gravity="center">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:background="@drawable/main_button_border"
+            android:layout_height="match_parent"
+            android:text="הרשמה"
+            android:id="@+id/registration_btn"
+            android:textAlignment="center"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="30dp"
+            android:textSize="20sp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:background="@drawable/main_button_border"
+            android:layout_height="match_parent"
+            android:text="הדרכה"
+            android:id="@+id/tutorial_btn"
+            android:textAlignment="center"
+            android:paddingVertical="15dp"
+            android:paddingHorizontal="40dp"
+            android:layout_marginRight="5dp"
+            android:textSize="20sp" />
+    </LinearLayout>
+</LinearLayout>

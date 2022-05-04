@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="בחר באפשרות שמייצגת הכי טוב את המצב הספורטיבי שלך: "
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:paddingTop="15dp"
+        android:textStyle="bold"/>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:singleSelection="true"
+        style="@style/Widget.MaterialComponents.Chip.Choice"
+        app:selectionRequired="true"
+        android:textAppearance="@style/chipTextAppearance"
+        android:id="@+id/sportStatus_cg"
+        app:chipSpacing="10dp">
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="match_parent"
+            android:textAppearance="@style/chipTextAppearance"
+            style="@style/Widget.MaterialComponents.Chip.Choice" android:layout_height="wrap_content"
+            android:text="פעיל מאוד ספורטיבית: מתאמן 5 פעמים בשבוע או יותר"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="match_parent"
+            android:textAppearance="@style/chipTextAppearance"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_height="wrap_content"
+            android:text="פעיל ספורטיבית: מתאמן בין 2-4 פעמים בשבוע"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="match_parent"
+            android:textAppearance="@style/chipTextAppearance"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_height="wrap_content"
+            android:text="פעיל באופן חלקי: מתאמן פעם-פעמיים בשבוע לסירוגין"/>
+
+        <com.google.android.material.chip.Chip
+            android:layout_width="match_parent"
+            style="@style/Widget.MaterialComponents.Chip.Choice"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/chipTextAppearance"
+            android:text="בכלל לא פעיל ספורטיבית: לא מתאמן על בסיס קבוע"/>
+    </com.google.android.material.chip.ChipGroup>
+
+    <Button
+        android:id="@+id/endSportStatus_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#534F4F"
+        android:enabled="false"
+        android:text="סיום"
+        android:textSize="20sp" />
+</LinearLayout>

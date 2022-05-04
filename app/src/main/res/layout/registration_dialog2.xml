@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical">
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="מין: "
+        android:paddingRight="5sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textDirection="rtl"
+        android:gravity="center"
+        android:id="@+id/species_rg"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:text="זכר"
+            android:textSize="20sp"
+            android:layout_height="match_parent"
+            android:paddingLeft="20sp" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:text="נקבה"
+            android:textSize="20sp"
+            android:layout_height="match_parent"
+            android:paddingLeft="20sp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:text="אחר"
+            android:textSize="20sp"
+            android:layout_height="match_parent" />
+    </RadioGroup>
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="גיל: "
+        android:paddingRight="5sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layoutDirection="rtl">
+        <EditText
+            android:layout_weight="2"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="16"
+            android:inputType="number"
+            android:id="@+id/age_et"
+            android:textSize="20sp"/>
+        <SeekBar
+            android:layout_weight="8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:id="@+id/age_sb"
+            android:min="16"
+            android:max="100"
+            android:textDirection="rtl"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="משקל (בקילוגרמים): "
+        android:paddingRight="5sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layoutDirection="rtl">
+        <EditText
+            android:layout_weight="2"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:inputType="number"
+            android:text="20"
+            android:id="@+id/weight_et"
+            android:textSize="20sp"/>
+        <SeekBar
+            android:layout_weight="8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:id="@+id/weight_sb"
+            android:min="20"
+            android:max="120"
+            android:textDirection="rtl"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="גובה (בסנטימטרים): "
+        android:paddingRight="5sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10"
+        android:layoutDirection="rtl">
+        <EditText
+            android:layout_weight="2"
+            android:textAlignment="center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="100"
+            android:inputType="number"
+            android:id="@+id/height_et"
+            android:textSize="20sp"/>
+        <SeekBar
+            android:layout_weight="8"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/black"
+            android:id="@+id/height_sb"
+            android:min="100"
+            android:max="200"
+            android:textDirection="rtl"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layoutDirection="rtl">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:text="סטטוס אימונים: "
+        android:paddingRight="5sp"
+        android:textSize="20sp"
+        android:textColor="@color/black"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingHorizontal="15dp"
+            android:text="לבחירה יש ללחוץ כאן"
+            android:enabled="false"
+            android:textSize="15sp"
+            android:id="@+id/sportStatus_btn"
+            android:backgroundTint="#534F4F" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="סיים הרשמה"
+        android:textSize="20sp"
+        android:enabled="false"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:id="@+id/register2_btn"
+        android:backgroundTint="#534F4F"/>
+</LinearLayout>

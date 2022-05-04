@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">הכל בראש</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="field_pattern_username">שם המשתמש חייב לכלול בין 5 ל15 תוים, אות אחת בעברית וספרה אחת לפחות. כמו כן,
+        לא יכולים להופיע בו תווים מלבד אותיות ומספרים: נקודה, רווח וסימנים אחרים לא יתקבלו.
+        יש לציין כי אם שם המשתמש קיים במערכת, לא ניתן ליצור משתמש עם השם הזה.
+    </string>
+    <string name="field_pattern_password">סיסמא חייבת לכלול בין 5 ל20 תוים, אות קטנה באנגלית, אות גדולה באנגלית וספרה אחת לפחות.
+        כמו כן, לא יכולים להופיע בה תווים מלבד אותיות ומספרים: נקודה, רווח וסימנים אחרים לא יתקבלו.
+    </string>
+    <string name="field_pattern_confirm">בשדה אימות הסיסמא צריכה להיות הסיסמא שהוזנה בשדה \'סיסמא\'
+    </string>
+
+    <string name="guide_text1">ברוכים הבאים לאפליקציית \'הכל בראש\'! זהו מדריך קצר שיערוך לכם היכרות עם הפיצ\'רים הבסיסיים של האפליקציה.</string>
+    <string name="guide_text2">כיוצר האפליקציה החלטתי לנסות ולספק את הכלים השימושיים ביותר לאנשים המעוניינים
+        לשמור על אורח חיים בריא ולטפח את הכושר הגופני שלהם.
+        בין הכלים הללו נמנים תכנון תפריט שבועי לכל משתמש,
+         ייעוץ לגבי אימוני כושר, תיעוד המזון שהמשתמשים צורכים במשך כל יום בשבוע ועוד. </string>
+    <string name="guide_text3">במסכי האפליקציה השונים תוכלו למצוא את הכלים הללו.
+    אחרי שתתחברו למשתמש שלכם או שתיצרו משתמש חדש ותגדירו לעצמכם תפריט אישי-שבועי,
+        מסך הבית יוכל להפנות אתכם לשלושה אזורים שונים: אזור הצריכה היומית,
+    אזור האימונים והכושר ואזור הנתונים הפיזיולוגיים.</string>
+    <string name="guide_text4">לא אגלה לכם מה תמצאו בכל אזור... את זה אשאיר לכם לגלות בעצמכם.
+    בכל מקרה, מקווה שתפיקו את המירב מהאפליקציה\nבהצלחה!</string>
+    <string name="navigation_drawer_open">פתח את תפריט הניווט</string>
+    <string name="navigation_drawer_close">סגור את תפריט הניווט</string>
+    <string name="title_activity_food">FoodActivity</string>
+    <string name="tab_text_1">צריכה יומית</string>
+    <string name="tab_text_2">תפריט שבועי</string>
+
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">zWy8OmKRDNmfnQD4xKAu5HeJ6Yq6vm4vpIr9ogoF</string>
+    <string name="back4app_client_key">IvnKHztz748cReA10od294VEVRypSNb5GpC50Szu</string>
+</resources>
